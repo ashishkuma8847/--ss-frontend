@@ -44,7 +44,12 @@ const Products = () => {
               <img className="absolute item-c block z-0 min-w-[700px] w-full h-[700px]" src="assets/images/HeroBg.png" alt="bg" />
               </div>
             </div>
-            <div className="grid  grid-cols-3 gap-[30px] pt-[50px] pb-[80px]">
+            <div className="flex flex-col gap-[30px] pt-[50px] pb-[80px]">
+              <div className="flex gap-4 items-end text-base">
+                <div className="w-[20px] h-[40px] bg-primaryred rounded"></div>
+              <h4 className="text-primaryred text-[24px] font-Poppins font-medium">Why Choose Shri Shyam Stone?</h4>
+              </div>
+            <div className="grid  grid-cols-3 gap-[30px] ">
                 {
                     data.map((item,index)=>(
 
@@ -55,6 +60,7 @@ const Products = () => {
                         </div>
                     ))
                 }
+            </div>
             </div>
           </div>
         </main>
