@@ -12,3 +12,30 @@
 .active{
     color: #b32a31;
 }
+
+html::-webkit-scrollbar {
+  width: 10px;
+  border: none;
+}
+
+html::-webkit-scrollbar-track {
+  /* border-radius: 20px; */
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(94.58deg, #552219 0%, #804646 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100px;
+}
+
+html::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 0 12px;
+    }
+}

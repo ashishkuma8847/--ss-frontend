@@ -65,20 +65,25 @@ function TypingText({
 
   return (
     <div className="w-full  flex items-start  justify-start ">
-      <div className={`text-7xl max-w-[510px] w-full tracking-wide font-semibold text-black ${className}`}>
-        Primium Stone <span className="text-primaryred ">{currentText}</span> 
-        <motion.span
-          animate={controls}
-          className="inline-block text-primaryred"
-        >
-          |
-        </motion.span>
+      <div
+        className={`md:text-7xl text-5xl flex flex-col max-w-[510px] w-full tracking-wide font-semibold text-black ${className}`}
+      >
+        <span className="whitespace-nowrap">Primium Stone </span>
+        <span className="text-primaryred ">
+          {currentText}
+          <motion.span
+            animate={controls}
+            className="inline-block text-primaryred"
+          >
+            |
+          </motion.span>
+        </span>
       </div>
     </div>
   );
 }
 
- function core() {
+function core() {
   return (
     <TypingText
       words={herosectionLebels}
@@ -90,4 +95,4 @@ function TypingText({
     />
   );
 }
-export default core
+export default core;

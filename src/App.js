@@ -1,11 +1,13 @@
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './component/common/Header';
-import About from './pages/About';
-import Products from './pages/Products';
-import Gallery from './pages/Gallery';
-import Prices from './pages/Prices';
-import Home from './pages/Home';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./component/common/Header";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Gallery from "./pages/Gallery";
+import Prices from "./pages/Prices";
+import Home from "./pages/Home";
+import Footer from "./component/common/Footer";
+import ScrollToTop from "./component/common/ScrollToTop";
 
 function App() {
   return (
@@ -33,16 +35,18 @@ function App() {
     //   <AiOutlineClose className="w-5 h-5 text-gray-700 hover:text-red-600" />
     // </button>
     <>
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/About' element={<About/>}/>
-      <Route path='/Products' element={<Products/>}/>
-      <Route path='/Gallery' element={<Gallery/>}/>
-      <Route path='/Prices' element={<Prices/>}/>
-    </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Products" element={<Products />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Prices" element={<Prices />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
