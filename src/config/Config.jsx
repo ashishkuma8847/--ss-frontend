@@ -1,0 +1,1 @@
+export const herosectionLebels = ["Doorframes","Windows","Temple Shelf"]

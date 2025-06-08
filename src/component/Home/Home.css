@@ -1,0 +1,29 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  color: #333;
+  box-shadow:
+    0 8px 16px rgba(179, 42, 49, 0.25),    
+    0 12px 30px rgba(0, 0, 0, 0.1),        
+    0 0 20px rgba(179, 42, 49, 0.2);       
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 12px 24px rgba(179, 42, 49, 0.35),
+    0 16px 40px rgba(0, 0, 0, 0.15),
+    0 0 40px rgba(179, 42, 49, 0.3);
+  transform: translateY(-4px);
+}
+
+.image {
+  filter: drop-shadow(8px 8px 14px #b32a31);
+}
+
+.item-c{
+top: 50%;
+left: 50%;
+transform: translate(-50%,-60%);
+}

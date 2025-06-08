@@ -1,0 +1,24 @@
+{
+    "pages":[
+        {
+            "title":"Home",
+            "path":"/"
+        },
+         {
+            "title":"About",
+            "path":"/About"
+        },
+         {
+            "title":"Products",
+            "path":"/Products"
+        },
+         {
+            "title":"Gallery",
+            "path":"/Gallery"
+        },
+         {
+            "title":"Prices",
+            "path":"/Prices"
+        }
+    ]
+}
