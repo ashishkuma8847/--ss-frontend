@@ -4,7 +4,6 @@ import Header from "./component/common/Header";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Gallery from "./pages/Gallery";
-import Prices from "./pages/Prices";
 import Home from "./pages/Home";
 import Footer from "./component/common/Footer";
 import ScrollToTop from "./component/common/ScrollToTop";
@@ -43,7 +42,6 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Products" element={<Products />} />
           <Route path="/Gallery" element={<Gallery />} />
-          <Route path="/Prices" element={<Prices />} />
         </Routes>
         <Footer />
       </BrowserRouter>

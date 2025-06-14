@@ -4,21 +4,18 @@
             "title":"Home",
             "path":"/"
         },
-         {
-            "title":"About",
-            "path":"/About"
-        },
+         
          {
             "title":"Products",
             "path":"/Products"
         },
+        {
+            "title":"About",
+            "path":"/About"
+        },
          {
             "title":"Gallery",
             "path":"/Gallery"
-        },
-         {
-            "title":"Prices",
-            "path":"/Prices"
         }
     ]
 }

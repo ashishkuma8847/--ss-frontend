@@ -5,115 +5,91 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-primarylight py-12 px-6 md:px-20 text-gray-800">
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-        {/* Logo & Description */}
-        <div className="flex flex-col items-start">
-          <div className="flex items-center mb-4">
-            <img
-              src="/headicon.svg"
-              alt="Shri Shyam Store Logo"
-              className="w-10 h-10 mr-3"
-            />
-            <h2 className="text-2xl font-semibold font-Poppins whitespace-nowrap">श्री Shyam Store</h2>
+    <footer className="relative bg-white pt-16 pb-8  px-6 sm:px-10 md:px-16 border-t border-gray-200 text-gray-800">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        {/* Logo + Description */}
+        <div>
+          <div className="flex items-center mb-5">
+            <div className="relative">
+              <img src="/headicon.svg" alt="Logo" className="w-12 h-12 relative z-10" />
+              <div className="absolute top-0 left-0 w-12 h-12 rounded-full blur-md bg-primaryred opacity-25 -z-10"></div>
+            </div>
+            <h2 className="ml-4 text-2xl font-bold font-Poppins whitespace-nowrap">श्री Shyam Store</h2>
           </div>
-          <p className="text-sm font-Poppins max-w-xs leading-relaxed">
+          <p className="text-sm leading-relaxed text-gray-600 font-Poppins max-w-md">
             Crafted to frame every entrance with elegance and durability.
-            Premium stones and exceptional craftsmanship since [Year].
+            Premium stones and craftsmanship since [Year].
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 font-Poppins">Quick Links</h3>
-          <ul className="space-y-2 font-Poppins text-sm">
-            <li>
-              <Link to="/" className="hover:underline">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/products" className="hover:underline">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:underline">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:underline">
-                Contact
-              </Link>
-            </li>
+          <h3 className="text-lg font-semibold text-primaryred mb-4 font-Poppins">Quick Links</h3>
+          <ul className="space-y-3 text-sm font-Poppins text-gray-700">
+            {[
+              { name: "Home", path: "/" },
+              { name: "Products", path: "/products" },
+              { name: "About Us", path: "/about" },
+              { name: "Contact", path: "/contact" },
+            ].map(({ name, path }) => (
+              <li key={name}>
+                <Link
+                  to={path}
+                  className="hover:text-primaryred transition-colors duration-200"
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 font-Poppins">Contact Us</h3>
-          <ul className="text-sm font-Poppins space-y-3">
-            <li className="flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-primaryred mb-4 font-Poppins">Contact Us</h3>
+          <ul className="space-y-4 text-sm text-gray-700 font-Poppins">
+            <li className="flex items-center gap-3">
               <MdPhone className="text-primaryred" size={20} />
-              <span>+91 98765 43210</span>
+              +91 98765 43210
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-3">
               <MdEmail className="text-primaryred" size={20} />
-              <span>info@shri-shyam-store.com</span>
+              info@shri-shyam-store.com
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-3">
               <MdLocationOn className="text-primaryred" size={20} />
-              <span>123 Stone Street, Jaipur, India</span>
+              123 Stone Street, Jaipur, India
             </li>
           </ul>
         </div>
 
         {/* Social Media */}
         <div>
-          <h3 className="text-xl font-semibold mb-4 font-Poppins">Follow Us</h3>
-          <div className="flex space-x-4">
-            <a
-              href="https://facebook.com/shrishyamstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primaryred"
-              aria-label="Facebook"
-            >
-              <Facebook size={24} />
-            </a>
-            <a
-              href="https://twitter.com/shrishyamstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primaryred"
-              aria-label="Twitter"
-            >
-              <Twitter size={24} />
-            </a>
-            <a
-              href="https://instagram.com/shrishyamstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primaryred"
-              aria-label="Instagram"
-            >
-              <Instagram size={24} />
-            </a>
-            <a
-              href="https://linkedin.com/company/shrishyamstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primaryred"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} />
-            </a>
+          <h3 className="text-lg font-semibold text-primaryred mb-4 font-Poppins">Follow Us</h3>
+          <div className="flex flex-wrap gap-4">
+            {[
+              { href: "https://facebook.com/shrishyamstore", icon: <Facebook size={20} /> },
+              { href: "https://twitter.com/shrishyamstore", icon: <Twitter size={20} /> },
+              { href: "https://instagram.com/shrishyamstore", icon: <Instagram size={20} /> },
+              { href: "https://linkedin.com/company/shrishyamstore", icon: <Linkedin size={20} /> },
+            ].map(({ href, icon }, index) => (
+              <a
+                key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gray-300 rounded-full p-2 text-gray-700 hover:text-primaryred hover:border-primaryred transition-all transform hover:scale-110"
+              >
+                {icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="mt-12 border-t border-primarylight/40 pt-6 text-center text-xs font-Poppins text-gray-600">
+      {/* Bottom Text */}
+      <div className="mt-12 pt-6 border-t border-gray-200 text-center text-xs text-gray-500 font-Poppins">
         &copy; {new Date().getFullYear()} Shri Shyam Store. All rights reserved.
       </div>
     </footer>
